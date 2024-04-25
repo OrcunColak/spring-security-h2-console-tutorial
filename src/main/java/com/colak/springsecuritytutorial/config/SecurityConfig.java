@@ -23,7 +23,7 @@ public class SecurityConfig {
                         .anyRequest().authenticated())
                 // X-Frame-Options is an element in the HTTP response header that informs whether rendering is possible in <frame>, <iframe>, <object>, etc.
                 // Required to show IFrame
-                .headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::disable));
+                .headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::disable))
         ;
 
         return http.build();
