@@ -14,6 +14,7 @@ public class SecurityConfig {
     // http://localhost:8080/h2-console/
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        // Uses HTTP Basic Authentication by default
         http
                 // Required to avoid You don't have authorization to view this page. HTTP ERROR 403
                 .csrf(AbstractHttpConfigurer::disable)
